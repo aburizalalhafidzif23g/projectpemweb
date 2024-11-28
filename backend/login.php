@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require './../config/db.php';
 
 if(isset($_POST['submit'])) {
@@ -12,18 +12,34 @@ if(isset($_POST['submit'])) {
         $data = mysqli_fetch_assoc($user);
         
         if(password_verify($password,$data['password'])) {
-            echo "selamat datang ".$data['name'];
-            die;
-
+           
             //otorisasi
-        } else {
-            echo "password salah";
-            die;
+            $_SESSION['name'] = $data['name'];
+            $_SESSION['role'] = $data['role'];
+
+            if($_SESSION['role'] == 'admin'){
+                header('Location:./../admin.php');
+            } else {
+                header("Location:./../profile.php");
+            }
+        } else { ?>
+            <script type="text/JavaScript">
+                alert("password salah");
+                window.location="./../index.php"
+            </script>
+            <?php
+                
+            }
+
+    } else { ?>
+        <script type="text/JavaScript">
+            alert("password atau email salah");
+            window.location="./../index.php"
+        </script>
+        <?php
+            
         }
 
-    } else {
-        echo "email atau password salah";
-        die;
-    }
+    
 }
 ?>
