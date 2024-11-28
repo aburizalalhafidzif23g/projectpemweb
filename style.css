@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #28a745; /* Hijau Bootstrap */
+    color: #fff;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* About Section */
+#about {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+#services {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Vision & Mission Section */
+#vision-mission {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+#vision-mission h2, #vision-mission h3 {
+    color: #28a745;
+    font-weight: bold;
+}
+
+#vision-mission p, #vision-mission ul {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+#vision-mission ul {
+    list-style: none;
+    padding: 0;
+}
+
+#vision-mission ul li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#contact p:hover {
+    color: #28a745;
+    transition: color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background: #28a745;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 0;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    #services .card {
+        margin-bottom: 20px;
+    }
+}
